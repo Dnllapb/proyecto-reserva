@@ -1,19 +1,31 @@
 server:
   port: 8080
+
 spring:
+  application:
+    name: demo-security
   datasource:
-    url: jdbc:postgresql://localhost:5432/prueba
-    username: postgres
-    password: 1012
+    password: Abc123!
+    url: jdbc:postgresql://localhost:5432/demo-security
+    username: security-user
+    driver-class-name: org.postgresql.Driver
   jpa:
-    defer-datasource-initialization: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: d5608c2a97c84dd0c0e0374ab865a131e0305df3f642ff83a03d796d748ac251
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
 
 
 
