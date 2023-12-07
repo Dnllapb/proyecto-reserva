@@ -1,8 +1,8 @@
-package com.proyectoreserva.proyectoreserva.user;
+package com.proyectoreserva.proyectoreserva.controller;
 
+import com.proyectoreserva.proyectoreserva.service.UserService;
+import com.proyectoreserva.proyectoreserva.user.Users;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

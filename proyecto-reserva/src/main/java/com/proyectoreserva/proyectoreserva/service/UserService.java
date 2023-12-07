@@ -1,5 +1,7 @@
-package com.proyectoreserva.proyectoreserva.user;
+package com.proyectoreserva.proyectoreserva.service;
 
+import com.proyectoreserva.proyectoreserva.repository.UserRepository;
+import com.proyectoreserva.proyectoreserva.user.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
