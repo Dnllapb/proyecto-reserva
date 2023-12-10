@@ -1,15 +1,14 @@
-package com.proyectoreserva.proyectoreserva.user;
-
-
-
+package com.proyectoreserva.proyectoreserva.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import com.proyectoreserva.proyectoreserva.service.UserService;
+import com.proyectoreserva.proyectoreserva.user.Users;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,7 +40,7 @@ public class UserController {
     }
 
     @PostMapping(path = "newUser")
-    public ResponseEntity<Object>  newUser(@RequestBody Users user) {
+    public ResponseEntity<Object> newUser(@RequestBody Users user) {
        return this.userService.newUser(user);
     }
 
